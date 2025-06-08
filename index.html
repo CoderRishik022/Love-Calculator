@@ -14,6 +14,12 @@
         n = Math.floor(n) + 1;
         // alert("Love percentage: " + n + "%");
         document.getElementById("result").innerHTML = n;
+        if(n >= 90){
+            document.getElementById("text_result").innerHTML = "You are made for each other❤️";
+        }
+        if(n <= 20){
+            document.getElementById("text_result").innerHTML = "Why this much hate?!";
+        }
         alreadyGenerated = true;
       }
 
@@ -39,7 +45,8 @@
       <div class="sec-container">
         <h3 id="result" class="res">__</h3>
         <h3 class="res">%</h3>
-      </div>
+    </div>
+    <h4 id="text_result" class="res"></h4>
     </div>
   </body>
 </html>
