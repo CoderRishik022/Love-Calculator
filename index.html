@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Love Calculator</title>
+    <link href="./style.css" rel="stylesheet" />
+    <script>
+      let alreadyGenerated = false;
+      function love() {
+        if (alreadyGenerated) return;
+        var n = Math.random();
+        n = n * 100;
+        n = Math.floor(n) + 1;
+        // alert("Love percentage: " + n + "%");
+        document.getElementById("result").innerHTML = n;
+        alreadyGenerated = true;
+      }
+
+      function resetCalc() {
+        document.getElementById("result").innerHTML = "";
+        alreadyGenerated = false;
+      }
+    </script>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="title">Love❤️Calculator</h1>
+      <p class="text">Enter first name:</p>
+      <input type="textbox" class="textbox" />
+      <div class="heart">❤️</div>
+      <p class="text">Enter Second name:</p>
+      <input type="textbox" class="textbox" />
+      <br />
+      <br />
+      <input type="submit" class="button" value="Enter" onclick="love()" />
+      <input type="button" class="button" value="Reset" onclick="resetCalc()" />
+      <h2 class="res">%Love:</h2>
+      <div class="sec-container">
+        <h3 id="result" class="res">__</h3>
+        <h3 class="res">%</h3>
+      </div>
+    </div>
+  </body>
+</html>
